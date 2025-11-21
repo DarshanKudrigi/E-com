@@ -85,6 +85,7 @@ export default function TabLayout() {
           name="index"
           options={{
             title: 'Home',
+            headerShown: false,
             tabBarIcon: ({ color }) => (
               <FontAwesome name="th-large" size={20} color={color} />
             ),
@@ -94,6 +95,7 @@ export default function TabLayout() {
           name="cart"
           options={{
             title: 'Cart',
+            headerShown: false,
             tabBarIcon: ({ color }) => (
               <FontAwesome name="shopping-cart" size={20} color={color} />
             ),
@@ -101,14 +103,11 @@ export default function TabLayout() {
             tabBarBadgeStyle: { backgroundColor: '#ef4444', color: 'white', fontWeight: 'bold' }
           }}
         />
-        {/* IMPORTANT: The delivery and payment screens should NOT be tabs, 
-            as they are part of a linear checkout process. 
-            They should be accessible via navigation (router.push) from other screens. 
-            However, keeping them here ensures they are part of the main navigation stack. */}
         <Tabs.Screen
           name="delivery"
           options={{
             title: 'Delivery',
+            headerShown: false,
             tabBarIcon: ({ color }) => (
               <FontAwesome name="truck" size={20} color={color} />
             ),
@@ -118,6 +117,7 @@ export default function TabLayout() {
           name="payment"
           options={{
             title: 'Payment',
+            headerShown: false,
             tabBarIcon: ({ color }) => (
               <FontAwesome name="credit-card" size={20} color={color} />
             ),
@@ -127,6 +127,7 @@ export default function TabLayout() {
           name="profile"
           options={{
             title: 'Profile',
+            headerShown: false,
             tabBarIcon: ({ color }) => (
               <FontAwesome name="user-circle" size={20} color={color} />
             ),
